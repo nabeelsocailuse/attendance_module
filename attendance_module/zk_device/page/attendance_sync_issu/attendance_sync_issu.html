@@ -1,0 +1,40 @@
+<style>
+    .text-white h5{
+        color: white !important;
+    }
+</style>
+<div class="container my-4">
+    <div class="card shadow-sm rounded-4 border-0">
+        <div class="card-header bg-primary text-white rounded-top-4" >
+            <h5 class="mb-0">Central Office > 10.0.7.201 > 4370</h5>
+        </div>
+
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                    <thead class="table-light text-uppercase small text-muted">
+                        <tr>
+                            <th style="width: 20%">Timestamp</th>
+                            <th style="width: 60%">Message</th>
+                            <th style="width: 20%">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logTableBody">
+                        {% for row in data %}
+                        <tr>
+                            <td class="fw-semibold text-secondary">{{ row.timestamp }}</td>
+                            <td>{{ row.error }}</td>
+                            <td>
+                                <span class="badge rounded-pill"
+                                      style="background-color: {{ row.color }}; color: #fff;">
+                                      {{ row.status }}
+                                </span>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+[2025-10-23 12:23:23] ATTENDANCE ERROR: Command '['bench', '--site', 'erp.alkhidmat.com', 'execute', 'akf_hrms.services.live_capture.biometric_attendance.create_akfp.create_attendance_log', '--kwargs', '{"device_id": "638", "device_ip": "10.0.7.201", "device_port": 4370, "attendance_date": "2025-10-23", "log": "2025-10-23 17:23:16"}']' returned non-zero exit status 1.
+[2025-10-23 12:23:24] DEVICE DISCONNECTED
+[2025-10-23 12:23:29] TRYING TO CONNECT...
+[2025-10-23 12:23:29] DEVICE ONLINE

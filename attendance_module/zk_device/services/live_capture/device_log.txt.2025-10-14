@@ -1,0 +1,28 @@
+[2025-10-20 12:03:51] ATTENDANCE ERROR: Command '['bench', '--site', 'erp.alkhidmat.com', 'execute', 'akf_hrms.services.live_capture.biometric_attendance.create_akfp.create_attendance_log', '--kwargs', '{"device_id": "847", "device_ip": "10.0.7.201", "device_port": 4370, "attendance_date": "2025-10-20", "log": "2025-10-20 17:03:44"}']' returned non-zero exit status 1.
+[2025-10-20 12:03:51] DEVICE DISCONNECTED
+[2025-10-20 12:03:56] TRYING TO CONNECT...
+[2025-10-20 12:03:56] DEVICE ONLINE
+[2025-10-20 12:11:25] ATTENDANCE ERROR: Command '['bench', '--site', 'erp.alkhidmat.com', 'execute', 'akf_hrms.services.live_capture.biometric_attendance.create_akfp.create_attendance_log', '--kwargs', '{"device_id": "228", "device_ip": "10.0.7.201", "device_port": 4370, "attendance_date": "2025-10-20", "log": "2025-10-20 17:11:18"}']' returned non-zero exit status 1.
+[2025-10-20 12:11:26] DEVICE DISCONNECTED
+[2025-10-20 12:11:31] TRYING TO CONNECT...
+[2025-10-20 12:11:31] DEVICE ONLINE
+[2025-10-20 12:23:40] ATTENDANCE ERROR: Command '['bench', '--site', 'erp.alkhidmat.com', 'execute', 'akf_hrms.services.live_capture.biometric_attendance.create_akfp.create_attendance_log', '--kwargs', '{"device_id": "233", "device_ip": "10.0.7.201", "device_port": 4370, "attendance_date": "2025-10-20", "log": "2025-10-20 17:23:34"}']' returned non-zero exit status 1.
+[2025-10-20 12:23:40] DEVICE DISCONNECTED
+[2025-10-20 12:23:45] TRYING TO CONNECT...
+[2025-10-20 12:23:45] DEVICE ONLINE
+[2025-10-20 12:29:00] ATTENDANCE ERROR: Command '['bench', '--site', 'erp.alkhidmat.com', 'execute', 'akf_hrms.services.live_capture.biometric_attendance.create_akfp.create_attendance_log', '--kwargs', '{"device_id": "650", "device_ip": "10.0.7.201", "device_port": 4370, "attendance_date": "2025-10-20", "log": "2025-10-20 17:28:54"}']' returned non-zero exit status 1.
+[2025-10-20 12:29:00] DEVICE DISCONNECTED
+[2025-10-20 12:29:05] TRYING TO CONNECT...
+[2025-10-20 12:29:05] DEVICE ONLINE
+[2025-10-20 12:38:01] ATTENDANCE ERROR: Command '['bench', '--site', 'erp.alkhidmat.com', 'execute', 'akf_hrms.services.live_capture.biometric_attendance.create_akfp.create_attendance_log', '--kwargs', '{"device_id": "644", "device_ip": "10.0.7.201", "device_port": 4370, "attendance_date": "2025-10-20", "log": "2025-10-20 17:37:54"}']' returned non-zero exit status 1.
+[2025-10-20 12:38:01] DEVICE DISCONNECTED
+[2025-10-20 12:38:06] TRYING TO CONNECT...
+[2025-10-20 12:38:06] DEVICE ONLINE
+[2025-10-20 13:25:58] ATTENDANCE ERROR: Command '['bench', '--site', 'erp.alkhidmat.com', 'execute', 'akf_hrms.services.live_capture.biometric_attendance.create_akfp.create_attendance_log', '--kwargs', '{"device_id": "101", "device_ip": "10.0.7.201", "device_port": 4370, "attendance_date": "2025-10-20", "log": "2025-10-20 18:25:51"}']' returned non-zero exit status 1.
+[2025-10-20 13:25:58] DEVICE DISCONNECTED
+[2025-10-20 13:26:03] TRYING TO CONNECT...
+[2025-10-20 13:26:03] DEVICE ONLINE
+[2025-10-20 13:40:21] ATTENDANCE ERROR: Command '['bench', '--site', 'erp.alkhidmat.com', 'execute', 'akf_hrms.services.live_capture.biometric_attendance.create_akfp.create_attendance_log', '--kwargs', '{"device_id": "915", "device_ip": "10.0.7.201", "device_port": 4370, "attendance_date": "2025-10-20", "log": "2025-10-20 18:40:15"}']' returned non-zero exit status 1.
+[2025-10-20 13:40:21] DEVICE DISCONNECTED
+[2025-10-20 13:40:26] TRYING TO CONNECT...
+[2025-10-20 13:40:26] DEVICE ONLINE

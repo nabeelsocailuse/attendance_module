@@ -1,0 +1,65 @@
+<style>
+    .info-settings {
+        /* padding-right: 10px; */
+        /* font-size: 10px; */
+        font-weight: bold;
+    }
+
+    .text-size {
+        /* font-size: 13px; */
+    }
+    .text-border{
+        border: 1px solid black;
+        border-style: dashed;
+        margin: 0px;
+        border-radius: 10px;
+        line-height: 40px;
+    }
+</style>
+<div class="row text-border">
+    <div class="col-sm-12">
+        
+        <div class="row text-size">
+            <div class="col-sm-4">
+                <label for="">Employee Name:</label>
+            </div>
+            <div class="col-sm-8">
+                <span class="info-settings">{{employee_name}}</span>
+            </div>
+        </div>
+        
+        <div class="row text-size">
+            <div class="col-sm-4">
+                <label for="">Department:</label>
+            </div>
+            <div class="col-sm-8">
+                {% if (department) %}
+                <span class="info-settings">{{department}}</span>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="row text-size">
+            <div class="col-sm-4">
+                <label for="">Designation:</label>
+            </div>
+            <div class="col-sm-8">
+                {% if (department) %}
+                <span class="info-settings">{{designation}}</span>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="row text-size">
+            <div class="col-sm-4">
+                <label for="">Company:</label>
+
+            </div>
+            <div class="col-sm-8">
+                {% if (company) %}
+                <span class="info-settings">{{company}}</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

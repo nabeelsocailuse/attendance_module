@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-03 12:18:28.427432",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "zk_company_device_detail"
+ ],
+ "fields": [
+  {
+   "fieldname": "zk_company_device_detail",
+   "fieldtype": "Table",
+   "label": "ZK Company Device Detail",
+   "options": "ZK Company Device Detail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-05-03 12:24:02.067952",
+ "modified_by": "Administrator",
+ "module": "ZK Device",
+ "name": "ZK Company",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

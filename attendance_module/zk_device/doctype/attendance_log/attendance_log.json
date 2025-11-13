@@ -1,0 +1,242 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "AL-ID-.{device_id}.-.YYYY.-.######",
+ "creation": "2024-03-26 13:30:46.716269",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_detail_section",
+  "employee",
+  "designation",
+  "department",
+  "company",
+  "device_id",
+  "column_break_zswl",
+  "employee_name",
+  "branch",
+  "shift",
+  "mark_check_in",
+  "mark_check_out",
+  "device_detail_section",
+  "device_ip",
+  "attendance_id",
+  "column_break_hxba",
+  "device_port",
+  "log_detail_section",
+  "log_type",
+  "log_from",
+  "column_break_jzpo",
+  "attendance_date",
+  "log",
+  "current_coordinates_section",
+  "latitude",
+  "column_break_swmr",
+  "longitude"
+ ],
+ "fields": [
+  {
+   "fieldname": "log",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Log"
+  },
+  {
+   "fieldname": "employee_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Detail"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_zswl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "device_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Device Detail"
+  },
+  {
+   "fieldname": "column_break_hxba",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "device_port",
+   "fieldtype": "Data",
+   "label": "Device Port"
+  },
+  {
+   "fieldname": "log_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Log Detail"
+  },
+  {
+   "fieldname": "log_type",
+   "fieldtype": "Select",
+   "label": "Log Type",
+   "options": "\nIN\nOUT"
+  },
+  {
+   "fieldname": "column_break_jzpo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "device_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Device ID"
+  },
+  {
+   "fieldname": "device_ip",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Device IP"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Link",
+   "label": "Shift",
+   "options": "Shift Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Attendance Date"
+  },
+  {
+   "fetch_from": "employee.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "log_from",
+   "fieldtype": "Select",
+   "label": "Log From",
+   "options": "\nLive\nCron\nZK Tool"
+  },
+  {
+   "fieldname": "attendance_id",
+   "fieldtype": "Small Text",
+   "label": "Attendance ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mark_check_in",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Mark Check In"
+  },
+  {
+   "fieldname": "mark_check_out",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Mark Check Out"
+  },
+  {
+   "fieldname": "current_coordinates_section",
+   "fieldtype": "Section Break",
+   "label": "Current Coordinates"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "Latitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_swmr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "Longitude",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Branch",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-07 19:32:48.887617",
+ "modified_by": "Administrator",
+ "module": "ZK Device",
+ "name": "Attendance Log",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "employee"
+}

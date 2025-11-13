@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2024-05-24 15:32:15.159446",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_detail_section",
+  "employee",
+  "company",
+  "column_break_zswl",
+  "shift",
+  "device_detail_section",
+  "device_id",
+  "column_break_hxba",
+  "device_ip",
+  "device_port",
+  "log_detail_section",
+  "log_type",
+  "log_from",
+  "column_break_jzpo",
+  "attendance_date",
+  "log"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Detail"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "device_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Device ID"
+  },
+  {
+   "fieldname": "column_break_zswl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Shift",
+   "options": "Shift Type"
+  },
+  {
+   "fieldname": "device_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Device Detail"
+  },
+  {
+   "fieldname": "device_ip",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Device IP"
+  },
+  {
+   "fieldname": "column_break_hxba",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "device_port",
+   "fieldtype": "Data",
+   "label": "Device Port"
+  },
+  {
+   "fieldname": "log_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Log Detail"
+  },
+  {
+   "fieldname": "log_type",
+   "fieldtype": "Select",
+   "label": "Log Type",
+   "options": "\nIN\nOUT"
+  },
+  {
+   "fieldname": "column_break_jzpo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Attendance Date"
+  },
+  {
+   "fieldname": "log",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Log"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "log_from",
+   "fieldtype": "Select",
+   "label": "Log From",
+   "options": "\nLive\nCron\nZK Tool"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2025-09-18 15:56:52.695032",
+ "modified_by": "Administrator",
+ "module": "ZK Device",
+ "name": "Proxy Attendance Log",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "employee"
+}

@@ -1,0 +1,345 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:OT-{employee}-{employee_name}-{####}",
+ "color": "brown",
+ "creation": "2024-03-28 11:32:30.925752",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_b7xt",
+  "naming_series",
+  "year",
+  "month",
+  "employee",
+  "employee_name",
+  "company",
+  "department",
+  "designation",
+  "cnic",
+  "shift",
+  "salary_structure_assignment",
+  "additional_salary",
+  "current_role",
+  "next_workflow_approver",
+  "column_break_l4dw",
+  "employee_info_html",
+  "detail_of_overtime_section",
+  "detail_of_overtime",
+  "calculation_of_overtime_section",
+  "total_hours_worked",
+  "total_overtime_hours",
+  "hourly_rate",
+  "basic_salary",
+  "column_break_fcwe",
+  "amount_in_figures",
+  "amount_in_words",
+  "section_break_sydf",
+  "detail_of_travelling_in_case_of_drivers_only",
+  "remarks_section",
+  "requested_by",
+  "recommended_by",
+  "column_break_xgts",
+  "approval_status",
+  "general_manager_finance",
+  "amended_from",
+  "section_break_itjf",
+  "tracking_information",
+  "tracking_html"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_b7xt",
+   "fieldtype": "Section Break",
+   "label": "Emloyee Information"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Year",
+   "options": "\n2024\n2025\n2026\n2027\n2028\n2029\n2030\n2031\n2032\n2033\n2034\n2035",
+   "reqd": 1
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Month",
+   "options": "\nJanuary\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_l4dw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "detail_of_overtime_section",
+   "fieldtype": "Section Break",
+   "label": "Detail of Overtime"
+  },
+  {
+   "fieldname": "detail_of_overtime",
+   "fieldtype": "Table",
+   "label": "Detail of Overtime",
+   "options": "Details of OT",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_hours_worked",
+   "fieldtype": "Data",
+   "label": "Total Hours Worked",
+   "read_only": 1
+  },
+  {
+   "fieldname": "detail_of_travelling_in_case_of_drivers_only",
+   "fieldtype": "Table",
+   "label": "Detail of Travelling (In Case of Drivers Only)",
+   "options": "Details of Travelling-Drivers Only"
+  },
+  {
+   "fieldname": "calculation_of_overtime_section",
+   "fieldtype": "Section Break",
+   "label": "Calculation of Overtime"
+  },
+  {
+   "fieldname": "column_break_fcwe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Data",
+   "label": "Requested By"
+  },
+  {
+   "fieldname": "recommended_by",
+   "fieldtype": "Data",
+   "label": "Recommended By"
+  },
+  {
+   "fieldname": "column_break_xgts",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "general_manager_finance",
+   "fieldtype": "Date",
+   "label": "General Manager Finance"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Overtime Claim Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_info_html",
+   "fieldtype": "HTML",
+   "label": "Employee Info"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "OCF-%(employee)s-%(month)s-%(year)s-.#####"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_overtime_hours",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total Overtime Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "salary_structure_assignment.custom_hourly_base",
+   "fieldname": "hourly_rate",
+   "fieldtype": "Currency",
+   "label": "Hourly Rate",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "amount_in_figures",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount In Figures",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "amount_in_words",
+   "fieldtype": "Small Text",
+   "label": "Amount in (Words)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "salary_structure_assignment",
+   "fieldtype": "Link",
+   "label": "Salary Structure Assignment",
+   "options": "Salary Structure Assignment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_sydf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "additional_salary",
+   "fieldtype": "Link",
+   "label": "Additional Salary",
+   "options": "Additional Salary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "\nPending\nApproved\nRejected\nApproved by the Head of Department\nRejected by the Head of Department\nApproved by the CEO\nRejected by the CEO\nCancelled",
+   "permlevel": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fetch_if_empty": 1,
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fetch_if_empty": 1,
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "employee.custom_cnic",
+   "fetch_if_empty": 1,
+   "fieldname": "cnic",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "CNIC",
+   "options": "Designation"
+  },
+  {
+   "fetch_from": "salary_structure_assignment.base",
+   "fetch_if_empty": 1,
+   "fieldname": "basic_salary",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Basic Salary"
+  },
+  {
+   "fetch_from": "employee.default_shift",
+   "fetch_if_empty": 1,
+   "fieldname": "shift",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Shift",
+   "options": "Shift Type"
+  },
+  {
+   "fetch_from": "employee.company",
+   "fetch_if_empty": 1,
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fetch_from": "employee.custom_current_role",
+   "fetch_if_empty": 1,
+   "fieldname": "current_role",
+   "fieldtype": "Data",
+   "label": "Current Role",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_workflow_approver",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Next Workflow Approver"
+  },
+  {
+   "fieldname": "section_break_itjf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tracking_html",
+   "fieldtype": "HTML",
+   "label": "Tracking Html"
+  },
+  {
+   "fieldname": "tracking_information",
+   "fieldtype": "Code",
+   "hidden": 1,
+   "label": "Tracking Information"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-30 16:13:44.155480",
+ "modified_by": "Administrator",
+ "module": "Attendance Module",
+ "name": "Overtime Claim Form",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "employee",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "employee"
+}

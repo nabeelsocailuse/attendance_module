@@ -1,0 +1,227 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:AA-{employee}-{#####}",
+ "creation": "2024-04-02 12:21:19.835706",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "column_break_esix",
+  "posting_date",
+  "department",
+  "section_break_qfyf",
+  "company",
+  "designation",
+  "column_break_yfrp",
+  "branch",
+  "last_seven_days_stats_section",
+  "seven_days_stats",
+  "section_break_dvup",
+  "adjustment_date",
+  "adjustment_for",
+  "status",
+  "adjustment_on_stats",
+  "amended_from",
+  "column_break_usdx",
+  "compensation_date",
+  "compensation_for",
+  "compensation_type",
+  "compensation_on_stats",
+  "section_break_ytsx",
+  "reasonnotes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_dvup",
+   "fieldtype": "Section Break",
+   "label": "Adjustment of Attendance"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Attendance Adjustment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_esix",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_usdx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nRecommended by the Head of Department\nRejected by the Head of Department\nApproved by the CEO\nRejected by the CEO",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reasonnotes",
+   "fieldtype": "Small Text",
+   "label": "Reason(Notes)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_seven_days_stats_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "seven_days_stats",
+   "fieldtype": "HTML",
+   "label": "Seven Days Stats"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "adjustment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Adjustment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "compensation_on_stats",
+   "fieldtype": "HTML",
+   "label": "Compensation On Stats"
+  },
+  {
+   "fieldname": "compensation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Compensation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "adjustment_for",
+   "fieldtype": "Link",
+   "label": "Adjustment For",
+   "options": "Attendance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "compensation_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Compensation Type",
+   "options": "\nLate Entry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "compensation_for",
+   "fieldtype": "Link",
+   "label": "Compensation For",
+   "options": "Attendance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ytsx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "adjustment_on_stats",
+   "fieldtype": "HTML",
+   "label": "Adjustment On Stats"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_qfyf",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fetch_from": "employee.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_yfrp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-10-21 16:06:33.993375",
+ "modified_by": "Administrator",
+ "module": "Attendance Module",
+ "name": "Attendance Adjustment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "employee"
+}

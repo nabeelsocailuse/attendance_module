@@ -1,0 +1,235 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-03 11:51:32.056281",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company_detail_section",
+  "company",
+  "column_break_tvtq",
+  "log_type",
+  "device_detail_section",
+  "device_ip",
+  "column_break_cssv",
+  "device_port",
+  "other_filters_section",
+  "branch",
+  "column_break_eeqt",
+  "department",
+  "column_break_bwfi",
+  "designation",
+  "column_break_hzho",
+  "employee",
+  "column_break_wwey",
+  "get_employees",
+  "process_attendance_section",
+  "fetched",
+  "total_employees",
+  "column_break_baic",
+  "fetch_attendance",
+  "column_break_aglz",
+  "mark_attendance",
+  "date_ranges_section",
+  "from_date",
+  "column_break_sbus",
+  "to_date",
+  "logs_detail_section",
+  "employee_list"
+ ],
+ "fields": [
+  {
+   "fieldname": "company_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Company Detail"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_tvtq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "IN",
+   "fieldname": "log_type",
+   "fieldtype": "Select",
+   "label": "Log Type",
+   "options": "\nIN\nOUT"
+  },
+  {
+   "fieldname": "device_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Device Detail"
+  },
+  {
+   "fieldname": "device_ip",
+   "fieldtype": "Data",
+   "label": "Device IP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cssv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "device_port",
+   "fieldtype": "Data",
+   "label": "Device Port",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_ranges_section",
+   "fieldtype": "Section Break",
+   "label": "Date Ranges"
+  },
+  {
+   "default": "Today",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "column_break_sbus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "logs_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "employee_list",
+   "fieldtype": "Table",
+   "label": "Employee List",
+   "options": "Employee List"
+  },
+  {
+   "fieldname": "other_filters_section",
+   "fieldtype": "Section Break",
+   "label": "Other Filters"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_bwfi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "column_break_hzho",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_wwey",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "get_employees",
+   "fieldtype": "Button",
+   "label": "Get Employees"
+  },
+  {
+   "fieldname": "process_attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Process Attendance"
+  },
+  {
+   "default": "0",
+   "fieldname": "fetched",
+   "fieldtype": "Check",
+   "label": "Fetched"
+  },
+  {
+   "fieldname": "total_employees",
+   "fieldtype": "Int",
+   "label": "Total Employees"
+  },
+  {
+   "fieldname": "column_break_baic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.fetched == 0",
+   "description": "From machine",
+   "fieldname": "fetch_attendance",
+   "fieldtype": "Button",
+   "label": "Fetch Attendance"
+  },
+  {
+   "fieldname": "column_break_aglz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.fetched == 1",
+   "fieldname": "mark_attendance",
+   "fieldtype": "Button",
+   "label": "Mark Attendance"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "column_break_eeqt",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-09-19 14:04:28.625069",
+ "modified_by": "Administrator",
+ "module": "ZK Device",
+ "name": "ZK Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
