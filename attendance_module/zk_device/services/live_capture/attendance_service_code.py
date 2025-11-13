@@ -18,19 +18,22 @@
 #RestartSec=10
 #[Install]
 #WantedBy=multi-user.target
+
+# cd /lib/systemd/system/hashoo_foundation_live_capture.service
+
 [Unit]
-Description=AKFP Service
+Description=Attendance Live Capture Service
 After=multi-user.target
 
 [Service]
-WorkingDirectory=/home/master/Frappe-alkhidmat
-User=master
-Group=master
+WorkingDirectory=/home/xpertadmin/frappe-hashu
+User=xpertadmin
+Group=xpertadmin
 Type=simple
-ExecStart=/usr/bin/python3 /home/master/Frappe-alkhidmat/apps/akf_hrms/akf_hrms/services/live_capture/live_akfp.py
-StandardOutput=append:/var/log/live_akfp_service.log
-StandardError=append:/var/log/live_akfp_service.log
-#SyslogIdentifier=live_akfp
+ExecStart=/usr/bin/python3 /home/xpertadmin/frappe-hashu/apps/attendance_module/attendance_module/zk_device/services/live_capture/live_attendance.py
+StandardOutput=append:/var/log/live_attendance_service.log
+StandardError=append:/var/log/live_attendance_service.log
+# SyslogIdentifier=live_attendance
 Restart=always
 RestartSec=10
 LimitNOFILE=65536
@@ -52,9 +55,9 @@ sudo nano /lib/systemd/system/test.service (name of the service which is test in
 > enter below info update your service path
 
 sudo systemctl daemon-reload
-sudo systemctl enable akfp_central_office.service
-sudo systemctl start akfp_central_office.service
+sudo systemctl enable hashoo_foundation_live_capture.service
+sudo systemctl start hashoo_foundation_live_capture.service
 
-sudo systemctl stop akfp_central_office.service
-sudo systemctl restart akfp_central_office.service
-sudo systemctl status akfp_central_office.service
+sudo systemctl stop hashoo_foundation_live_capture.service
+sudo systemctl restart hashoo_foundation_live_capture.service
+sudo systemctl status hashoo_foundation_live_capture.service

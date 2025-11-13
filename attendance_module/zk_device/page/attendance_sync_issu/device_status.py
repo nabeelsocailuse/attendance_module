@@ -3,11 +3,11 @@ import os
 from frappe.utils import (
 	format_datetime
 )
-# bench --site erp.alkhidmat.com execute akf_hrms.services.cron_jobs.device_status.get_device_status
+# bench --site erp.alkhidmat.com execute attendance_module.zk_device.services.cron_jobs.device_status.get_device_status
 @frappe.whitelist()
 def get_device_status(filters=None):
 	"""Read last lines of the device log and extract current status."""
-	log_path = os.path.join(frappe.get_app_path("akf_hrms"), "services", "live_capture", "device_log.txt")
+	log_path = os.path.join(frappe.get_app_path("attendance_module"), "zk_device", "services", "live_capture", "device_log.txt")
 	print(log_path)
 	if not os.path.exists(log_path):
 	    return {"status": "Log file not found", "details": ""}

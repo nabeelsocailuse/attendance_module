@@ -5,3 +5,4 @@
 tags
 node_modules
 __pycache__
+attendance_module/zk_device/services/live_capture/*.txt

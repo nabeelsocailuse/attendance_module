@@ -16,12 +16,6 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 LOG_FILE_PATH = os.path.join(SCRIPT_DIR, "device_log.txt")
 
 
-# Set environment timezone first
-# os.environ['TZ'] = 'Asia/Karachi'
-# time.tzset()  # only works on Linux
-# Configure logger with weekly rotation
-# logging.Formatter.converter = time.localtime
-
 logger = logging.getLogger("ZKDeviceLogger")
 logger.setLevel(logging.INFO)
 
@@ -69,22 +63,23 @@ while True:
 
             This is the mode used by 95% of ZKTeco devices (iFace, K40, MB2000, etc.).
         '''
-        zk = ZK(device_ip, port=device_port, timeout=500, password=786786, force_udp=False, ommit_ping=True)
+        zk = ZK(device_ip, port=device_port, timeout=10, password=786786, force_udp=False, ommit_ping=False)
         log("TRYING TO CONNECT")
-        print("TRYING TO CONNECT...")
+        # print("TRYING TO CONNECT...")
         conn = zk.connect()
         log("DEVICE ONLINE")
-        print("DEVICE ONLINE")
+        # print("DEVICE ONLINE")
         # print(conn.live_capture())
         # Process live attendance
         for attendance in conn.live_capture():
-            print("looping")
+            # print("looping")
             try:
                 if attendance is None:
-                    log("No Attendance")
-                    print("empty")
+                    # log("No Attendance")
+                    # print("empty")
+                    pass
                 else:
-                    print(f"ATTENDANCE: {attendance}")
+                    # print(f"ATTENDANCE: {attendance}")
                     # logger.info(attendance)
                     attendanceSplit = str(attendance).split()
                     device_id = attendanceSplit[1]
@@ -98,20 +93,20 @@ while True:
                         "log": device_date + " " + device_time
                     }
                     
-                    # import subprocess, os, json
+                    import subprocess, os, json
         
-                    # os.chdir('/home/frappe/frappe-bench/')
+                    os.chdir('/home/xpertadmin/frappe-hashu/')
 
-                    # # Convert args to JSON string
-                    # args_json = json.dumps(args)
+                    # Convert args to JSON string
+                    args_json = json.dumps(args)
                 
-                    # command = ["bench", "--site", "erp.hashoofoundation.org", 
-                    #         "execute", "attendance_module.zk_device.services.live_capture.biometric_attendance.create_akfp.create_attendance_log",
-                    #         "--kwargs", args_json  # Use --kwargs to pass JSON-formatted arguments
-                    #         ]
-                    # # Run the command
-                    # output = subprocess.run(command, check=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                    # # Print the output
+                    command = ["bench", "--site", "hf.xperterp.net", 
+                            "execute", "attendance_module.zk_device.services.live_capture.biometric_attendance.create_akfp.create_attendance_log",
+                            "--kwargs", args_json  # Use --kwargs to pass JSON-formatted arguments
+                            ]
+                    # Run the command
+                    output = subprocess.run(command, check=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    # Print the output
                     # print("Command Output:", output.stdout)
             except Exception as e:
                 log(f"ATTENDANCE ERROR: {e}")

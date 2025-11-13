@@ -10,8 +10,8 @@ frappe.pages['attendance-sync-issu'].on_page_load = function (wrapper) {
 const api = {
 	loadRealTimeInformation: function (page, filters) {
 		frappe.call({
-			method: 'akf_hrms.zk_device.page.attendance_sync_issu.device_status.get_device_status',
-			// method: 'akf_hrms.zk_device.page.attendance_sync_issu.device_status_multi_files.get_device_status',
+			method: 'attendance_module.zk_device.page.attendance_sync_issu.device_status.get_device_status',
+			// method: 'attendance_module.zk_device.page.attendance_sync_issu.device_status_multi_files.get_device_status',
 			args: {
 				filters: JSON.stringify(filters)
 			},
