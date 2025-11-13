@@ -1,0 +1,98 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"EGFSaRzGDB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Attendance Module</span>\",\"col\":12}},{\"id\":\"-0g4HC4Jt0\",\"type\":\"card\",\"data\":{\"card_name\":\"ZKTeco\",\"col\":4}},{\"id\":\"6UJmts8wnD\",\"type\":\"card\",\"data\":{\"card_name\":\"Dashboards\",\"col\":4}}]",
+ "creation": "2025-11-13 17:37:51.137737",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Attendance Module",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Dashboards",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance Sync Issue Dashboard",
+   "link_count": 0,
+   "link_to": "attendance-sync-issu",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ZKTeco",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ZK IP",
+   "link_count": 0,
+   "link_to": "ZK IP",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ZK Tool",
+   "link_count": 0,
+   "link_to": "ZK Tool",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Proxy Attendance Log",
+   "link_count": 0,
+   "link_to": "Proxy Attendance Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance Log",
+   "link_count": 0,
+   "link_to": "Attendance Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-11-13 17:45:05.454379",
+ "modified_by": "Administrator",
+ "module": "Attendance Module",
+ "name": "Attendance Module",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 32.0,
+ "shortcuts": [],
+ "title": "Attendance Module"
+}

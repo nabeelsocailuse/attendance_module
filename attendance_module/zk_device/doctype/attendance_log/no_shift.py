@@ -26,6 +26,9 @@ def get_no_shift(self):
 		in_time = None
 		out_time = None
 		hours_worked = None
+
+		if not logs_resp:
+			return filters
 		
 		logs_list = [row.log for row in logs_resp]
 		
