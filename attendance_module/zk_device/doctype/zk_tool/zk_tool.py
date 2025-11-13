@@ -71,7 +71,7 @@ class ZKTool(Document):
 			helper = ZK_helper(addr_ip, int(self.device_port))
 			if(not helper.test_ping()): return {"msg": "Destination Host Unreachable!", "logs": [], "fetched": 0}
 		
-			zk = ZK(str(addr_ip), port=int(self.device_port), timeout=1000, password=786786, force_udp=False, ommit_ping=False)
+			zk = ZK(str(addr_ip), port=int(self.device_port), timeout=100000, password=786786, force_udp=False, ommit_ping=False)
 			CONN = None
 			device_ids = None
 			attendance_records = None
@@ -144,13 +144,13 @@ def mark_attendance_for_employees(self, employees, logs, publish_progress=True):
 							"attendance_date": getdate(flog),
 							"log": flog,
 						})
-						# if(frappe.db.exists("Attendance Log", args)):
-						if(frappe.db.exists("Proxy Attendance Log", args)):
+						if(frappe.db.exists("Attendance Log", args)):
+						# if(frappe.db.exists("Proxy Attendance Log", args)):
 							pass
 						else:
 							args.update({
 								# "doctype": "Attendance Log",
-								"doctype": "Proxy Attendance Log",
+								# "doctype": "Proxy Attendance Log",
 								"log_type": self.log_type,
 								"log_from": "ZK Tool",
 							})

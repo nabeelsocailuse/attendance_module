@@ -186,7 +186,7 @@ def process_logs(filters, log_dict):
 		'out_time': out_time,
 		'custom_total_working_hours': filters.get('custom_total_working_hours'),
 		'custom_hours_worked': hours_worked,
-		'custom_overtime_hours': overtime_hours,
+		# 'custom_overtime_hours': overtime_hours,
 		'custom_in_times': in_time,
 		'custom_out_times': out_time,
 		'late_entry': get_late_entry(in_time, filters.get("start_time")),

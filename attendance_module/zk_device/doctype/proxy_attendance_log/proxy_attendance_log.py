@@ -10,7 +10,7 @@ class ProxyAttendanceLog(Document):
 		self.set_employee_and_shift_type()
 	# def after_insert(self):
 	# 	self.set_employee_and_shift_type()
-	
+		self.create_attendance_log()
 	def set_employee_and_shift_type(self):
 		query = f""" 
 				select 
@@ -26,4 +26,20 @@ class ProxyAttendanceLog(Document):
 			# frappe.db.set_value("Proxy Attendance Log", self.name, "employee", d.name)
 			# frappe.db.set_value("Proxy Attendance Log", self.name, "shift", d.shift_type)
 
+	'''def create_attendance_log(self):
+		args = frappe._dict({
+				"company": self.company,
+				"employee": self.employee,
+				"device_id": self.device_id,
+				"device_ip": self.device_ip,
+				"device_port": "4370",
+				"attendance_date": frappe.utils.getdate(self.log),
+				"log": self.log,
+				"doctype": "Attendance Log",
+				"log_type": self.log_type,
+				"log_from": "ZK Tool",
+			})
+						
+		doc = frappe.get_doc(args)
+		doc.insert(ignore_permissions=True)'''
 # bench --site erp.alkhidmat.com execute akf_hrms.zk_device.doctype.zk_tool.zk_tool.reset_status
